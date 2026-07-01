@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة تحكم سيرفر RTA</title>
+    <title>لوحة تحكم سيرفر RTA الشاملة</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;900&display=swap" rel="stylesheet">
@@ -17,11 +17,11 @@
 </head>
 <body class="text-slate-100 min-h-screen p-4 sm:p-6 flex flex-col items-center justify-center">
 
-    <div class="max-w-md w-full bg-slate-900 p-6 rounded-2xl shadow-2xl border border-slate-800 relative overflow-hidden">
+    <div class="max-w-md w-full bg-slate-900 p-6 rounded-2xl shadow-2xl border border-slate-800 relative overflow-hidden my-6">
         <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-600"></div>
         
         <h1 class="text-2xl font-black text-center text-emerald-400 mb-2">إدارة سيرفر RTA ⚙️</h1>
-        <p class="text-center text-xs text-slate-400 mb-6">التحكم في حالة وتشغيل الروابط السحابية</p>
+        <p class="text-center text-xs text-slate-400 mb-6">التحكم الموحد في (أندرويد / آيفون / بي سي)</p>
         
         <div id="login-section" class="space-y-4">
             <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
@@ -35,31 +35,61 @@
             
             <div class="p-4 bg-slate-950/50 rounded-xl border border-slate-800 space-y-3">
                 <div class="flex justify-between items-center">
-                    <h2 class="font-black text-white text-sm">1. هاك Delta</h2>
+                    <h2 class="font-black text-white text-sm">1. هاك Delta (Android)</h2>
                     <span id="delta-status-badge" class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-400">جاري الفحص...</span>
                 </div>
                 <div>
                     <label class="block text-[11px] text-slate-400 mb-1">رابط التحميل المباشر (APK):</label>
-                    <textarea id="delta-url" rows="2" class="w-full bg-slate-900 p-2 rounded-lg text-xs text-emerald-300 border border-slate-700 focus:outline-none focus:border-emerald-500 font-mono text-left" dir="ltr"></textarea>
+                    <textarea id="delta-url" rows="1" class="w-full bg-slate-900 p-2 rounded-lg text-xs text-emerald-300 border border-slate-700 focus:outline-none focus:border-emerald-500 font-mono text-left" dir="ltr"></textarea>
                 </div>
                 <div class="flex gap-2">
-                    <button onclick="updateGist('delta', true)" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2.5 rounded-lg text-xs font-black transition-all">تشغيل الـزر ✅</button>
-                    <button onclick="updateGist('delta', false)" class="flex-1 bg-red-600 hover:bg-red-500 py-2.5 rounded-lg text-xs font-black transition-all">تعطيل الـزر ❌</button>
+                    <button onclick="updateGist('delta', true)" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2 rounded-lg text-xs font-black transition-all">تشغيل ✅</button>
+                    <button onclick="updateGist('delta', false)" class="flex-1 bg-red-600 hover:bg-red-500 py-2 rounded-lg text-xs font-black transition-all">تعطيل ❌</button>
                 </div>
             </div>
 
             <div class="p-4 bg-slate-950/50 rounded-xl border border-slate-800 space-y-3">
                 <div class="flex justify-between items-center">
-                    <h2 class="font-black text-white text-sm">2. هاك Arceus</h2>
+                    <h2 class="font-black text-white text-sm">2. هاك Arceus (Android)</h2>
                     <span id="arceus-status-badge" class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-400">جاري الفحص...</span>
                 </div>
                 <div>
                     <label class="block text-[11px] text-slate-400 mb-1">رابط التحميل المباشر (APK):</label>
-                    <textarea id="arceus-url" rows="2" class="w-full bg-slate-900 p-2 rounded-lg text-xs text-emerald-300 border border-slate-700 focus:outline-none focus:border-emerald-500 font-mono text-left" dir="ltr"></textarea>
+                    <textarea id="arceus-url" rows="1" class="w-full bg-slate-900 p-2 rounded-lg text-xs text-emerald-300 border border-slate-700 focus:outline-none focus:border-emerald-500 font-mono text-left" dir="ltr"></textarea>
                 </div>
                 <div class="flex gap-2">
-                    <button onclick="updateGist('arceus', true)" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2.5 rounded-lg text-xs font-black transition-all">تشغيل الـزر ✅</button>
-                    <button onclick="updateGist('arceus', false)" class="flex-1 bg-red-600 hover:bg-red-500 py-2.5 rounded-lg text-xs font-black transition-all">تعطيل الـزر ❌</button>
+                    <button onclick="updateGist('arceus', true)" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2 rounded-lg text-xs font-black transition-all">تشغيل ✅</button>
+                    <button onclick="updateGist('arceus', false)" class="flex-1 bg-red-600 hover:bg-red-500 py-2 rounded-lg text-xs font-black transition-all">تعطيل ❌</button>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-950/50 rounded-xl border border-slate-800 space-y-3">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-black text-white text-sm">3. نسخة الآيفون (iOS)</h2>
+                    <span id="ios-status-badge" class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-400">جاري الفحص...</span>
+                </div>
+                <div>
+                    <label class="block text-[11px] text-slate-400 mb-1">رابط ملف الـ Plist المباشر:</label>
+                    <textarea id="ios-url" rows="1" class="w-full bg-slate-900 p-2 rounded-lg text-xs text-emerald-300 border border-slate-700 focus:outline-none focus:border-emerald-500 font-mono text-left" dir="ltr"></textarea>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="updateGist('ios', true)" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2 rounded-lg text-xs font-black transition-all">تشغيل ✅</button>
+                    <button onclick="updateGist('ios', false)" class="flex-1 bg-red-600 hover:bg-red-500 py-2 rounded-lg text-xs font-black transition-all">تعطيل ❌</button>
+                </div>
+            </div>
+
+            <div class="p-4 bg-slate-950/50 rounded-xl border border-slate-800 space-y-3">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-black text-white text-sm">4. أداة الكمبيوتر (PC)</h2>
+                    <span id="pc-status-badge" class="text-[11px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-400">جاري الفحص...</span>
+                </div>
+                <div>
+                    <label class="block text-[11px] text-slate-400 mb-1">رابط تحميل أداة الـ PC:</label>
+                    <textarea id="pc-url" rows="1" class="w-full bg-slate-900 p-2 rounded-lg text-xs text-emerald-300 border border-slate-700 focus:outline-none focus:border-emerald-500 font-mono text-left" dir="ltr"></textarea>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="updateGist('pc', true)" class="flex-1 bg-emerald-600 hover:bg-emerald-500 py-2 rounded-lg text-xs font-black transition-all">تشغيل ✅</button>
+                    <button onclick="updateGist('pc', false)" class="flex-1 bg-red-600 hover:bg-red-500 py-2 rounded-lg text-xs font-black transition-all">تعطيل ❌</button>
                 </div>
             </div>
 
@@ -70,14 +100,13 @@
     <script>
         // ==================== [ إعداداتك السحابية ] ====================
         const GITHUB_TOKEN = "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"; 
-        const GIST_ID = "bdcc249af49a22afee0dc64d32d8a577"; // تم وضع الـ ID الخاص بك هنا جاهز
+        const GIST_ID = "bdcc249af49a22afee0dc64d32d8a577"; 
         const FILE_NAME = "rta_config.json"; 
-        const ADMIN_PASSWORD = "123"; // غير الرقم السري للوحة من هنا
+        const ADMIN_PASSWORD = "67"; 
         // ============================================================
 
         const API_URL = `https://api.github.com/gists/${GIST_ID}`;
 
-        // حماية بسيطة للوحة التحكم
         function checkPassword() {
             const input = document.getElementById('admin-password').value;
             if (input === ADMIN_PASSWORD) {
@@ -89,57 +118,69 @@
             }
         }
 
-        // جلب الحالة الحالية من السحاب وعرضها في اللوحة
         async function loadCurrentConfig() {
             try {
                 let res = await fetch(API_URL + '?nocache=' + new Date().getTime());
                 let gistData = await res.json();
                 let config = JSON.parse(gistData.files[FILE_NAME].content);
                 
-                // تعبئة البيانات في الخانات
-                document.getElementById('delta-url').value = config.delta_link;
-                document.getElementById('arceus-url').value = config.arceus_link;
+                // تعبئة البيانات في الخانات الثلاث الجديدة والقديمة
+                document.getElementById('delta-url').value = config.delta_link || '';
+                document.getElementById('arceus-url').value = config.arceus_link || '';
+                document.getElementById('ios-url').value = config.ios_link || '';
+                document.getElementById('pc-url').value = config.pc_link || '';
 
-                // تحديث الشارات (Badges)
-                updateBadges(config.delta_status, config.arceus_status);
+                // تحديث جميع الشارات (Badges)
+                updateAllBadges(config);
             } catch (e) { 
-                alert("فشل في قراءة بيانات قيت هوب السحابية. تأكد من توكن ghp الحساب."); 
+                alert("فشل في قراءة بيانات قيت هوب السحابية. تأكد من تهيئة الـ Gist بالبيانات الجديدة."); 
             }
         }
 
-        function updateBadges(delta, arceus) {
-            const dBadge = document.getElementById('delta-status-badge');
-            if(delta) { dBadge.className = "text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-900/40"; dBadge.innerText = "شغال حالياً 🟢"; }
-            else { dBadge.className = "text-[11px] font-bold px-2 py-0.5 rounded bg-red-950 text-red-400 border border-red-900/40"; dBadge.innerText = "معطل حالياً 🔴"; }
-
-            const aBadge = document.getElementById('arceus-status-badge');
-            if(arceus) { aBadge.className = "text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-900/40"; aBadge.innerText = "شغال حالياً 🟢"; }
-            else { aBadge.className = "text-[11px] font-bold px-2 py-0.5 rounded bg-red-950 text-red-400 border border-red-900/40"; aBadge.innerText = "معطل حالياً 🔴"; }
+        function updateAllBadges(config) {
+            setBadge('delta-status-badge', config.delta_status);
+            setBadge('arceus-status-badge', config.arceus_status);
+            setBadge('ios-status-badge', config.ios_status);
+            setBadge('pc-status-badge', config.pc_status);
         }
 
-        // رفع التعديلات الجديدة لقيت هوب مباشرة
-        async function updateGist(hack, status) {
+        function setBadge(id, status) {
+            const badge = document.getElementById(id);
+            if(status) { 
+                badge.className = "text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-900/40"; 
+                badge.innerText = "شغال حالياً 🟢"; 
+            } else { 
+                badge.className = "text-[11px] font-bold px-2 py-0.5 rounded bg-red-950 text-red-400 border border-red-900/40"; 
+                badge.innerText = "معطل حالياً 🔴"; 
+            }
+        }
+
+        async function updateGist(platform, status) {
             const msg = document.getElementById('status-msg');
             msg.className = "text-center text-xs text-yellow-400 font-bold bg-yellow-950/30 py-2 rounded-lg border border-yellow-900/30 animate-pulse";
             msg.innerText = "جاري تحديث البيانات في قيت هوب...";
             msg.classList.remove('hidden');
 
             try {
-                // 1. جلب البيانات الأخيرة منعاً للتعارض
                 let res = await fetch(API_URL + '?nocache=' + new Date().getTime());
                 let gistData = await res.json();
                 let config = JSON.parse(gistData.files[FILE_NAME].content);
 
-                // 2. تعديل القيم المطلوبة
-                if (hack === 'delta') {
+                // تعديل القيم بحسب المنصة المختارة بالتحديد
+                if (platform === 'delta') {
                     config.delta_status = status;
                     config.delta_link = document.getElementById('delta-url').value;
-                } else {
+                } else if (platform === 'arceus') {
                     config.arceus_status = status;
                     config.arceus_link = document.getElementById('arceus-url').value;
+                } else if (platform === 'ios') {
+                    config.ios_status = status;
+                    config.ios_link = document.getElementById('ios-url').value;
+                } else if (platform === 'pc') {
+                    config.pc_status = status;
+                    config.pc_link = document.getElementById('pc-url').value;
                 }
 
-                // 3. دفع التحديث لقيت هوب عبر الـ PATCH API
                 let updateRes = await fetch(API_URL, {
                     method: 'PATCH',
                     headers: {
@@ -158,10 +199,10 @@
                 if(updateRes.ok) {
                     msg.className = "text-center text-xs text-emerald-400 font-bold bg-emerald-950/40 py-2 rounded-lg border border-emerald-900/40";
                     msg.innerText = "تم حفظ وحقن البيانات بنجاح تلقائي! 🎉";
-                    updateBadges(config.delta_status, config.arceus_status);
+                    updateAllBadges(config);
                     setTimeout(() => { msg.classList.add('hidden'); }, 2500);
                 } else {
-                    alert("قيت هوب رفض التعديل. تحقق من صلاحيات التوكن (Token).");
+                    alert("قيت هوب رفض التعديل. تحقق من صلاحيات التوكن.");
                     msg.classList.add('hidden');
                 }
             } catch (error) {
